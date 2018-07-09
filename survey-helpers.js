@@ -1,8 +1,5 @@
 /**
- * @title アンケート回答ブックマークレット
- * @description アンケートを自動回答するブックマークレット
- * @license MIT License
- * @author Neo http://neo.s21.xrea.com/
+ * アンケートサイト自動回答ブックマークレット
  * 
  * 以下のように個人情報と設定項目を指定し、このブックマークレットを読み込んで使う
  * 
@@ -26,14 +23,13 @@
  *   };
  *   s=d.createElement('script');
  *   s.onload=e;
- *   s.src='http://let.st-hatelabo.com/neos21/let/hLHUwLzfytkR.bookmarklet.js';
+ *   s.src='https://neos21.github.io/bookmarklets/survey-helpers.js';
  *   d.body.appendChild(s)
  * })(document);
  * 
  * // 1行にすると以下のとおり
- * javascript:((d,s,e)=>{e=()=>{SurveyHelpers({cityName:'東京',districtName:'足立',age:25,ageRange:20,birthYear:1993,birthMonth:2,birthDate:24,gender:'女',marriage:'未婚',jobRegExp:'正社|社員'},{loop:5})};s=d.createElement('script');s.onload=e;s.src='http://let.st-hatelabo.com/neos21/let/hLHUwLzfytkR.bookmarklet.js';d.body.appendChild(s)})(document);
+ * javascript:((d,s,e)=>{e=()=>{SurveyHelpers({cityName:'東京',districtName:'足立',age:25,ageRange:20,birthYear:1993,birthMonth:2,birthDate:24,gender:'女',marriage:'未婚',jobRegExp:'正社|社員'},{loop:5})};s=d.createElement('script');s.onload=e;s.src='https://neos21.github.io/bookmarklets/survey-helpers.js';d.body.appendChild(s)})(document);
  * ```
- * 
  */
 function SurveyHelpers(myInfo, settings) {
   // 引数未指定の場合は中止する
