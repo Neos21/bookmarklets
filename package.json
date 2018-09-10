@@ -4,6 +4,7 @@
   "description": "ブックマークレット集。",
   "private": true,
   "scripts": {
+    "uglifyjs": "uglifyjs",
     "start": "node ./scripts/uglify.js"
   },
   "repository": {
