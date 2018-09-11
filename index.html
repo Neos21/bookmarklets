@@ -21,9 +21,49 @@
         <section>
           <h2>Bookmarklets</h2>
           <dl>
-            <dt><a href="survey-helpers.js">survey-helpers.js</a></dt>
+            <dt><a href="survey-helpers.js">Survey Helpers</a> (<a href="src/survey-helpers.js">survey-helpers.js</a>)</dt>
             <dd>
               <p>アンケートサイト自動回答ブックマークレット。</p>
+              <p>以下のように設定項目を指定して実行する。</p>
+              <pre>javascript:((d,s,e)=&gt;{
+  e=()=&gt;{
+    N21SH({
+      cityName:'東京',
+      districtName:'足立',
+      age:25,
+      ageRange:20,
+      birthYear:1993,
+      birthMonth:2,
+      birthDate:24,
+      gender:'女',
+      marriage:'未婚',
+      jobRegExp:'正社|社員'
+    },{
+      loop:5
+    })
+  };
+  s=d.createElement('script');
+  s.onload=e;
+  s.src='https://neos21.github.io/bookmarklets/survey-helpers.js';
+  d.body.appendChild(s)
+})(document);</pre>
+              <p>1行にすると以下のようになる。</p>
+              <pre>javascript:((d,s,e)=&gt;{e=()=&gt;{N21SH({cityName:'東京',districtName:'足立',age:25,ageRange:20,birthYear:1993,birthMonth:2,birthDate:24,gender:'女',marriage:'未婚',jobRegExp:'正社|社員'},{loop:5})};s=d.createElement('script');s.onload=e;s.src='https://neos21.github.io/bookmarklets/survey-helpers.js';d.body.appendChild(s)})(document);</pre>
+            </dd>
+            <dt><a href="select-range.js">Select Range</a> (<a href="src/select-range.js">select-range.js</a>)</dt>
+            <dd>
+              <p>範囲選択ブックマークレット。<code>mousedown</code>・<code>mousemove</code>・<code>mouseup</code> を監視するので PC 用。</p>
+              <pre>javascript:((d,s)=&gt;{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/select-range.js';d.body.appendChild(s)})(document);</pre>
+            </dd>
+            <dt><a href="select-range-touch.js">Select Range Touch</a> (<a href="src/select-range-touch.js">select-range-touch.js</a>)</dt>
+            <dd>
+              <p>範囲選択ブックマークレット。<code>touchstart</code>・<code>touchmove</code>・<code>touchend</code> を監視するのでスマホなどタッチデバイス用。</p>
+              <pre>javascript:((d,s)=&gt;{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/select-range-touch.js';d.body.appendChild(s)})(document);</pre>
+            </dd>
+            <dt><a href="random-check-inputs.js">Random Check Inputs</a> (<a href="src/random-check-inputs.js">random-check-inputs.js</a>)</dt>
+            <dd>
+              <p><code>input[type=&quot;radio&quot;]</code>・<code>input[type=&quot;checkbox&quot;]</code> を <code>name</code> 属性ごとに1つランダムにクリックするブックマークレット。</p>
+              <pre>javascript:((d,s)=&gt;{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/random-check-inputs.js';d.body.appendChild(s)})(document);</pre>
             </dd>
           </dl>
         </section>

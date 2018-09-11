@@ -1,0 +1,1 @@
+(e=>{const a={};[].forEach.call(document.querySelectorAll("[type=radio],[type=checkbox]"),e=>{e.name&&(void 0===a[e.name]&&(a[e.name]=[]),a[e.name].push(e))}),Object.keys(a).forEach(e=>{a[e][Math.floor(Math.random()*a[e].length)].click()})})();

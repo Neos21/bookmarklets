@@ -4,7 +4,7 @@
  * タップとドラッグで選択した範囲にある要素をクリックする。チェックボックスなどを一括チェックする時に。
  * 以下のようなブックマークレットで読み込んで使う。
  * 
- * ```
+ * ```javascript
  * javascript:((d,s)=>{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/select-range-touch.js';d.body.appendChild(s)})(document);
  * ```
  * 

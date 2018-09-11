@@ -1,9 +1,9 @@
 /**
  * アンケートサイト自動回答ブックマークレット
  * 
- * 以下のように個人情報と設定項目を指定し、このブックマークレットを読み込んで使う
+ * 以下のように個人情報と設定項目を指定し、このブックマークレットを読み込んで使う。
  * 
- * ```
+ * ```javascript
  * javascript:((d,s,e)=>{
  *   e=()=>{
  *     N21SH({
@@ -27,7 +27,9 @@
  *   d.body.appendChild(s)
  * })(document);
  * 
- * // 1行にすると以下のとおり
+ * 1行にすると以下のとおり。
+ * 
+ * ```javascript
  * javascript:((d,s,e)=>{e=()=>{N21SH({cityName:'東京',districtName:'足立',age:25,ageRange:20,birthYear:1993,birthMonth:2,birthDate:24,gender:'女',marriage:'未婚',jobRegExp:'正社|社員'},{loop:5})};s=d.createElement('script');s.onload=e;s.src='https://neos21.github.io/bookmarklets/survey-helpers.js';d.body.appendChild(s)})(document);
  * ```
  */
@@ -52,6 +54,9 @@ function N21SH(myInfo, settings) {
   // 設定項目
   const loop = settings.loop || 5;  // 親要素を遡る階層数
   
+  const doc = document;
+  const queryAll = 'querySelectorAll';
+  
   
   // セレクトボックス選択
   // --------------------------------------------------------------------------------
@@ -68,11 +73,11 @@ function N21SH(myInfo, settings) {
   };
   
   // select 要素を探索する
-  Array.prototype.forEach.call(document.querySelectorAll('select'), (select) => {
+  [].forEach.call(doc[queryAll]('select'), (select) => {
     // その select 要素内の option 要素で探索が終わった場合は処理を中断するためのフラグ
     let finished = false;
     
-    Array.prototype.forEach.call(select.querySelectorAll('option'), (option) => {
+    [].forEach.call(select.querySelectorAll('option'), (option) => {
       // この select 要素が探索済なら中断する
       if(finished) {
         return;
@@ -91,7 +96,7 @@ function N21SH(myInfo, settings) {
         let isDate  = false;
         
         // その option 要素が所属する select 要素を全探索して、セレクトボックスが月か日のセレクトボックスかどうか判定する
-        Array.prototype.forEach.call(select.querySelectorAll('option'), (selectOption) => {
+        [].forEach.call(select.querySelectorAll('option'), (selectOption) => {
           const selectOptionInnerHTML = selectOption.innerHTML;
           
           if(selectOptionInnerHTML.includes(12)) {
@@ -124,7 +129,7 @@ function N21SH(myInfo, settings) {
   // --------------------------------------------------------------------------------
   
   // Type が text か tel の要素を探索する
-  Array.prototype.forEach.call(document.querySelectorAll('[type=text],[type=tel]'), (textbox) => {
+  [].forEach.call(doc[queryAll]('[type=text],[type=tel]'), (textbox) => {
     // 親要素に遡っていくための変数
     let parent = textbox;
     // 親要素を遡っての探索が済んでいることを示すフラグ
@@ -183,7 +188,7 @@ function N21SH(myInfo, settings) {
   };
   
   // Type が radio の要素を探索する
-  Array.prototype.forEach.call(document.querySelectorAll('[type=radio]'), (radio) => {
+  [].forEach.call(doc[queryAll]('[type=radio]'), (radio) => {
     // 異なるラジオボタン群が出てきたら、直前に探索したラジオボタンの情報をリセットする
     if((radioPrev.name !== '' && radioPrev.loop !== -1) && radio.name !== radioPrev.name) {
       radioPrev.name = '';
