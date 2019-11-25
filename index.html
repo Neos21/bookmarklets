@@ -12,8 +12,11 @@
     <script>
 
 document.addEventListener('DOMContentLoaded', function() {
-  // JS ファイルを取得して見出しの直後に挿入する
-  var fetchAndInsert = function(name) {
+  var baseUrl = 'https://neos21.github.io/bookmarklets/';
+  var distUrl = baseUrl + 'dist/';
+  
+  // JS ファイルを取得して見出しの直後にブックマークレットとして挿入する
+  var fetchDistAndInsert = function(name) {
     var xhr = new XMLHttpRequest();
     xhr.timeout = 5000;
     xhr.addEventListener('load', function() {
@@ -26,17 +29,25 @@ document.addEventListener('DOMContentLoaded', function() {
       catch(error) { console.log('Error', error, xhr); }
     });
     xhr.addEventListener('error', function() { console.log('Error', xhr); });
-    xhr.open('GET', 'https://neos21.github.io/bookmarklets/dist/' + name + '.js');
+    xhr.open('GET', distUrl + name + '.js');
     xhr.send();
   };
+  
+  // JS ファイルを参照する形式のブックマークレットコードを生成して挿入する
+  var insertCodeOfLoadingJs = function(name) {
+    var section = document.querySelector('#' + name);
+    section.insertAdjacentHTML('beforeend', '<pre>javascript:((d,s)=&gt;{s=d.createElement(\'script\');s.src=\'' + distUrl + name + '.js\';d.body.appendChild(s)})(document);</pre>');
+  };
+  
   var names = [
     'ec-navi-pex-news-clicker',
     'select-range',
     'select-range-touch',
     'random-check-inputs'
   ];
-  names.forEach(function (name){
-    fetchAndInsert(name);
+  names.forEach(function (name) {
+    fetchDistAndInsert(name);
+    insertCodeOfLoadingJs(name);
   });
 });
 
@@ -60,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <sectino id="ec-navi-pex-news-clicker">
           <h2><a href="dist/ec-navi-pex-news-clicker.js">EC Navi PeX News Clicker</a> (<a href="src/ec-navi-pex-news-clicker.js">ec-navi-pex-news-clicker.js</a>)</h2>
           <p>EC ナビ、PeX の「まいにちニュース」の気持ちを自動回答するブックマークレット。</p>
-          <pre>javascript:((d,s)=&gt;{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/dist/ec-navi-pex-news-clicker.js';d.body.appendChild(s)})(document);</pre>
+        </section>
         <section id="survey-helpers">
           <h2><a href="dist/survey-helpers.js">Survey Helpers</a> (<a href="src/survey-helpers.js">survey-helpers.js</a>)</h2>
           <p>アンケートサイト自動回答ブックマークレット。</p>
@@ -87,24 +98,20 @@ document.addEventListener('DOMContentLoaded', function() {
   s.src='https://neos21.github.io/bookmarklets/dist/survey-helpers.js';
   d.body.appendChild(s)
 })(document);</pre>
-          <h2>
           <p>1行にすると以下のようになる。</p>
           <pre>javascript:((d,s,e)=&gt;{e=()=&gt;{N21SH({cityName:'東京',districtName:'足立',age:25,ageRange:20,birthYear:1993,birthMonth:2,birthDate:24,gender:'女',marriage:'未婚',jobRegExp:'正社|社員'},{loop:5})};s=d.createElement('script');s.onload=e;s.src='https://neos21.github.io/bookmarklets/dist/survey-helpers.js';d.body.appendChild(s)})(document);</pre>
         </section>
         <section id="select-range">
           <h2><a href="dist/select-range.js">Select Range</a> (<a href="src/select-range.js">select-range.js</a>)</h2>
           <p>範囲選択ブックマークレット。<code>mousedown</code>・<code>mousemove</code>・<code>mouseup</code> を監視するので PC 用。</p>
-          <pre>javascript:((d,s)=&gt;{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/dist/select-range.js';d.body.appendChild(s)})(document);</pre>
         </section>
         <section id="select-range-touch">
           <h2><a href="dist/select-range-touch.js">Select Range Touch</a> (<a href="src/select-range-touch.js">select-range-touch.js</a>)</h2>
           <p>範囲選択ブックマークレット。<code>touchstart</code>・<code>touchmove</code>・<code>touchend</code> を監視するのでスマホなどタッチデバイス用。</p>
-          <pre>javascript:((d,s)=&gt;{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/dist/select-range-touch.js';d.body.appendChild(s)})(document);</pre>
         </section>
         <section id="random-check-inputs">
           <h2><a href="dist/random-check-inputs.js">Random Check Inputs</a> (<a href="src/random-check-inputs.js">random-check-inputs.js</a>)</h2>
           <p><code>input[type=&quot;radio&quot;]</code>・<code>input[type=&quot;checkbox&quot;]</code> を <code>name</code> 属性ごとに1つランダムにクリックするブックマークレット。</p>
-          <pre>javascript:((d,s)=&gt;{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/dist/random-check-inputs.js';d.body.appendChild(s)})(document);</pre>
         </section>
         <section>
           <h2>Author</h2>
