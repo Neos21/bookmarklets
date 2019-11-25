@@ -5,7 +5,7 @@
  * 以下のようなブックマークレットで読み込んで使う。
  * 
  * ```javascript
- * javascript:((d,s)=>{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/select-range-touch.js';d.body.appendChild(s)})(document);
+ * javascript:((d,s)=>{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/dist/select-range-touch.js';d.body.appendChild(s)})(document);
  * ```
  * 
  * TODO : 2本指になったらこれらのイベントを切ったり戻したりしたい

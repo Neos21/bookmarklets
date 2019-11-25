@@ -5,7 +5,7 @@
  * 以下のようなブックマークレットで読み込んで使う。
  * 
  * ```javascript
- * javascript:((d,s)=>{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/select-range.js';d.body.appendChild(s)})(document);
+ * javascript:((d,s)=>{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/dist/select-range.js';d.body.appendChild(s)})(document);
  * ```
  */
 ((win, doc, addEvent, getRect, sty, px, isMouseDown, isDragging, defaultStyle, createElement, rangeElem, pointElem, beginX, beginY, beginScrollX, beginScrollY) => {

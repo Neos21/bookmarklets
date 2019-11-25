@@ -1,24 +1,26 @@
 {
   "name": "bookmarklets",
-  "version": "1.0.0",
   "description": "ブックマークレット集。",
   "private": true,
   "scripts": {
     "uglifyjs": "uglifyjs",
     "start": "node ./scripts/uglify.js"
   },
+  "author": "Neo <neos21@gmail.com> (http://neo.s21.xrea.com/)",
+  "license": "MIT",
+  "homepage": "https://github.com/Neos21/bookmarklets#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Neos21/bookmarklets.git"
   },
-  "author": "Neo <neos21@gmail.com> (http://neo.s21.xrea.com/)",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Neos21/bookmarklets/issues"
   },
-  "homepage": "https://github.com/Neos21/bookmarklets#readme",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/Neos21"
+  },
   "devDependencies": {
     "uglify-es": "3.3.9"
-  },
-  "dependencies": {}
+  }
 }

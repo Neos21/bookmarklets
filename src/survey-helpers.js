@@ -23,14 +23,14 @@
  *   };
  *   s=d.createElement('script');
  *   s.onload=e;
- *   s.src='https://neos21.github.io/bookmarklets/survey-helpers.js';
+ *   s.src='https://neos21.github.io/bookmarklets/dist/survey-helpers.js';
  *   d.body.appendChild(s)
  * })(document);
  * 
  * 1行にすると以下のとおり。
  * 
  * ```javascript
- * javascript:((d,s,e)=>{e=()=>{N21SH({cityName:'東京',districtName:'足立',age:25,ageRange:20,birthYear:1993,birthMonth:2,birthDate:24,gender:'女',marriage:'未婚',jobRegExp:'正社|社員'},{loop:5})};s=d.createElement('script');s.onload=e;s.src='https://neos21.github.io/bookmarklets/survey-helpers.js';d.body.appendChild(s)})(document);
+ * javascript:((d,s,e)=>{e=()=>{N21SH({cityName:'東京',districtName:'足立',age:25,ageRange:20,birthYear:1993,birthMonth:2,birthDate:24,gender:'女',marriage:'未婚',jobRegExp:'正社|社員'},{loop:5})};s=d.createElement('script');s.onload=e;s.src='https://neos21.github.io/bookmarklets/dist/survey-helpers.js';d.body.appendChild(s)})(document);
  * ```
  */
 function N21SH(myInfo, settings) {

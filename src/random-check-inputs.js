@@ -5,7 +5,7 @@
  * 以下のようなブックマークレットで読み込んで使う。
  * 
  * ```javascript
- * javascript:((d,s)=>{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/random-check-inputs.js';d.body.appendChild(s)})(document);
+ * javascript:((d,s)=>{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/dist/random-check-inputs.js';d.body.appendChild(s)})(document);
  * ```
  */
 ((x) => {
