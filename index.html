@@ -39,7 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
     section.insertAdjacentHTML('beforeend', '<pre>javascript:((d,s)=&gt;{s=d.createElement(\'script\');s.src=\'' + distUrl + name + '.js\';d.body.appendChild(s)})(document);</pre>');
   };
   
+  // ブックマークレットコードを挿入する見出しを指定する
   var names = [
+    'open-between-gh-and-ghp',
     'ec-navi-pex-news-clicker',
     'select-range',
     'select-range-touch',
@@ -62,12 +64,24 @@ document.addEventListener('DOMContentLoaded', function() {
         <h1>Bookmarklets</h1>
         <p>ブックマークレット集。</p>
         <ul>
+          <li><a href="#open-between-gh-and-ghp">Open Between GitHub And GitHub Pages</a></li>
+          <li><a href="#open-hatena-blog-subscribe-page">Open Hatena Blog Subscribe Page</a></li>
           <li><a href="#ec-navi-pex-news-clicker">EC Navi PeX News Clicker</a></li>
           <li><a href="#survey-helpers">Survey Helpers</a></li>
           <li><a href="#select-range">Select Range</a></li>
           <li><a href="#select-range-touch">Select Range Touch</a></li>
           <li><a href="#random-check-inputs">Random Check Inputs</a></li>
         </ul>
+        <section id="open-between-gh-and-ghp">
+          <h2><a href="dist/open-between-gh-and-ghp.js">Open Between GitHub And GitHub Pages</a> (<a href="src/open-between-gh-and-ghp.js">open-between-gh-and-ghp.js</a>)</h2>
+          <p>GitHub リポジトリのページを開いていたら GitHub Pages に、GitHub Pages を開いていたら GitHub リポジトリのページを開く。</p>
+          <p>Chrome ブラウザでは <code>window.open()</code> が効かないかもしれないので、適宜 <code>location.href</code> に直して使うとよろし。</p>
+        </section>
+        <section id="open-hatena-blog-subscribe-page">
+          <h2><a href="dist/open-hatena-blog-subscribe-page.js">Open Hatena Blog Subscribe Page</a> (<a href="src/open-hatena-blog-subscribe-page.js">open-hatena-blog-subscribe-page.js</a>)</h2>
+          <p>現在見ているはてなブログの「読者になる」ページを開く。対象ページがはてなブログ製かどうかはチェックしていない。</p>
+          <pre>(x=&gt;{location.href='http://blog.hatena.ne.jp/hatenasupport/'+location.host+'/subscribe'})();</pre>
+        </section>
         <sectino id="ec-navi-pex-news-clicker">
           <h2><a href="dist/ec-navi-pex-news-clicker.js">EC Navi PeX News Clicker</a> (<a href="src/ec-navi-pex-news-clicker.js">ec-navi-pex-news-clicker.js</a>)</h2>
           <p>EC ナビ、PeX の「まいにちニュース」の気持ちを自動回答するブックマークレット。</p>

@@ -1,0 +1,1 @@
+location.href="http://blog.hatena.ne.jp/hatenasupport/"+location.host+"/subscribe";
