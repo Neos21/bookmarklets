@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // ブックマークレットコードを挿入する見出しを指定する
   var names = [
+    'get-github-repo-size',
     'open-between-gh-and-ghp',
     'ec-navi-pex-news-clicker',
     'select-range',
@@ -64,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <h1>Bookmarklets</h1>
         <p>ブックマークレット集。</p>
         <ul>
+          <li><a href="#get-github-repo-size">Get GitHub Repo Size</a></li>
           <li><a href="#open-between-gh-and-ghp">Open Between GitHub And GitHub Pages</a></li>
           <li><a href="#open-hatena-blog-subscribe-page">Open Hatena Blog Subscribe Page</a></li>
           <li><a href="#ec-navi-pex-news-clicker">EC Navi PeX News Clicker</a></li>
@@ -72,6 +74,10 @@ document.addEventListener('DOMContentLoaded', function() {
           <li><a href="#select-range-touch">Select Range Touch</a></li>
           <li><a href="#random-check-inputs">Random Check Inputs</a></li>
         </ul>
+        <section id="get-github-repo-size">
+          <h2><a href="dist/get-github-repo-size.js">Get GitHub Repo Size</a> (<a href="src/get-github-repo-size.js">get-github-repo-size.js</a>)</h2>
+          <p>GitHub ページを開いている時に実行すると、そのリポジトリのファイルサイズを GitHub API から取得する。</p>
+        </section>
         <section id="open-between-gh-and-ghp">
           <h2><a href="dist/open-between-gh-and-ghp.js">Open Between GitHub And GitHub Pages</a> (<a href="src/open-between-gh-and-ghp.js">open-between-gh-and-ghp.js</a>)</h2>
           <p>GitHub リポジトリのページを開いていたら GitHub Pages に、GitHub Pages を開いていたら GitHub リポジトリのページを開く。</p>
