@@ -1,1 +1,1 @@
-location.href="http://blog.hatena.ne.jp/hatenasupport/"+location.host+"/subscribe";
+(t=>{t.href="http://blog.hatena.ne.jp/hatenasupport/"+t.host+"/subscribe"})(location);

@@ -1,12 +1,7 @@
 /**
- * 範囲選択ブックマークレット (PC 用)
+ * Select Range
  * 
- * ドラッグで選択した範囲にある要素をクリックする。チェックボックスなどを一括チェックする時に。
- * 以下のようなブックマークレットで読み込んで使う。
- * 
- * ```javascript
- * javascript:((d,s)=>{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/dist/select-range.js';d.body.appendChild(s)})(document);
- * ```
+ * <p>ドラッグで選択した範囲にある要素をクリックする。<code>mousedown</code>・<code>mousemove</code>・<code>mouseup</code> を監視するので PC 用。チェックボックスなどを一括チェックする時に。</p>
  */
 ((win, doc, addEvent, getRect, sty, px, isMouseDown, isDragging, defaultStyle, createElement, rangeElem, pointElem, beginX, beginY, beginScrollX, beginScrollY) => {
   // 要素を生成して返す関数を作る

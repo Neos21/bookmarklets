@@ -1,8 +1,8 @@
 /**
- * 現在見ているはてなブログの「読者になる」ページを開く
+ * Open Hatena Blog Subscribe Page
  * 
- * 対象ページがはてなブログ製かどうかはチェックしていない
+ * <p>現在見ているはてなブログの「読者になる」ページを開く。対象ページがはてなブログ製かどうかはチェックしていない。</p>
  */
-(() => {
-  location.href = 'http://blog.hatena.ne.jp/hatenasupport/' + location.host + '/subscribe';
-})();
+((l) => {
+  l.href = 'http://blog.hatena.ne.jp/hatenasupport/' + l.host + '/subscribe';
+})(location);

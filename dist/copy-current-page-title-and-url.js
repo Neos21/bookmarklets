@@ -1,0 +1,1 @@
+((e,t)=>{(t=e.createElement("textarea")).textContent=e.title+" "+e.URL,e.body.appendChild(t),t.select(),e.execCommand("copy"),e.body.removeChild(t)})(document);

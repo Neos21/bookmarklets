@@ -1,14 +1,7 @@
 /**
- * 範囲選択ブックマークレット (タッチデバイス用)
+ * Select Range Touch
  * 
- * タップとドラッグで選択した範囲にある要素をクリックする。チェックボックスなどを一括チェックする時に。
- * 以下のようなブックマークレットで読み込んで使う。
- * 
- * ```javascript
- * javascript:((d,s)=>{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/dist/select-range-touch.js';d.body.appendChild(s)})(document);
- * ```
- * 
- * TODO : 2本指になったらこれらのイベントを切ったり戻したりしたい
+ * <p>タップとドラッグで選択した範囲にある要素をクリックする。<code>touchstart</code>・<code>touchmove</code>・<code>touchend</code> を監視するのでスマホなどタッチデバイス用。チェックボックスなどを一括チェックする時に。</p>
  */
 ((win, doc, addEvent, getRect, sty, px, isTouching, isDragging, defaultStyle, createElement, rangeElem, pointElem, beginX, beginY, beginScrollX, beginScrollY, endX, endY) => {
   // 要素を生成して返す関数を作る
@@ -112,3 +105,4 @@
   // endX
   // endY
 );
+// TODO : 2本指になったらこれらのイベントを切ったり戻したりしたい

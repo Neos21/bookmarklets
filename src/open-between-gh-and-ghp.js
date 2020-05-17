@@ -1,6 +1,7 @@
 /**
- * GitHub リポジトリのページを開いていたら GitHub Pages に、
- * GitHub Pages を開いていたら GitHub リポジトリのページを開く
+ * Open Between GitHub And GitHub Pages
+ * 
+ * <p>GitHub リポジトリのページを開いていたら GitHub Pages に、GitHub Pages を開いていたら GitHub リポジトリのページを開く。</p>
  */
 ((inputUrl, resultUrl) => {
   // Remove 'http://', 'https://', 'www.'
@@ -20,7 +21,7 @@
   }
   
   if(resultUrl) {
-    open(`https://${resultUrl.replace((/\/$/u), '')}`);
+    open(`https://${resultUrl.replace((/\/$/u), '')}`, '');
   } else {
     alert('Invalid URL');
   }

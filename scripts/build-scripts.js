@@ -1,3 +1,5 @@
+/** ./src/ ディレクトリ配下の JS ファイルを難読化し ./dist/ ディレクトリに出力する */
+
 const fs = require('fs');
 const path = require('path');
 const uglifyEs = require('uglify-es');

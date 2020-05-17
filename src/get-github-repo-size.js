@@ -1,5 +1,7 @@
 /**
- * GitHub ページを開いている時に実行すると、そのリポジトリのファイルサイズを GitHub API から取得する
+ * Get GitHub Repo Size
+ * 
+ * <p>GitHub ページを開いている時に実行すると、そのリポジトリのファイルサイズを GitHub API から取得する。</p>
  */
 ((getText, xhr, owner, repo, size) => {
   owner = getText('.author');

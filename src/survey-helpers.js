@@ -1,11 +1,9 @@
 /**
- * アンケートサイト自動回答ブックマークレット
+ * Survey Helpers
  * 
- * 以下のように個人情報と設定項目を指定し、このブックマークレットを読み込んで使う。
- * 
- * ```javascript
- * javascript:((d,s,e)=>{
- *   e=()=>{
+ * <p>アンケートサイト自動回答ブックマークレット。以下のように個人情報と設定項目を指定し、このブックマークレットを読み込んで使う。</p>
+ * <pre>javascript:((d,s,e)=&gt;{
+ *   e=()=&gt;{
  *     N21SH({
  *       cityName:'東京',
  *       districtName:'足立',
@@ -25,13 +23,11 @@
  *   s.onload=e;
  *   s.src='https://neos21.github.io/bookmarklets/dist/survey-helpers.js';
  *   d.body.appendChild(s)
- * })(document);
+ * })(document);</pre>
+ * <p>1行にすると以下のようになる。</p>
+ * <pre>javascript:((d,s,e)=&gt;{e=()=&gt;{N21SH({cityName:'東京',districtName:'足立',age:25,ageRange:20,birthYear:1993,birthMonth:2,birthDate:24,gender:'女',marriage:'未婚',jobRegExp:'正社|社員'},{loop:5})};s=d.createElement('script');s.onload=e;s.src='https://neos21.github.io/bookmarklets/dist/survey-helpers.js';d.body.appendChild(s)})(document);</pre>
  * 
- * 1行にすると以下のとおり。
- * 
- * ```javascript
- * javascript:((d,s,e)=>{e=()=>{N21SH({cityName:'東京',districtName:'足立',age:25,ageRange:20,birthYear:1993,birthMonth:2,birthDate:24,gender:'女',marriage:'未婚',jobRegExp:'正社|社員'},{loop:5})};s=d.createElement('script');s.onload=e;s.src='https://neos21.github.io/bookmarklets/dist/survey-helpers.js';d.body.appendChild(s)})(document);
- * ```
+ * {{disable-print-dist-script}}
  */
 function N21SH(myInfo, settings) {
   // 引数未指定の場合は中止する

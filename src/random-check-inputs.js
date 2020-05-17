@@ -1,16 +1,9 @@
 /**
- * ラジオボタン・チェックボックスをランダムにチェックするブックマークレット
+ * Random Check Inputs
  * 
- * name 属性ごとに1つの要素をランダムに抽出し、クリックする。
- * 以下のようなブックマークレットで読み込んで使う。
- * 
- * ```javascript
- * javascript:((d,s)=>{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/dist/random-check-inputs.js';d.body.appendChild(s)})(document);
- * ```
+ * <p>ラジオボタン <code>input[type=&quot;radio&quot;]</code>・チェックボックス <code>input[type=&quot;checkbox&quot;]</code> を <code>name</code> 属性ごとに1つランダムにクリックする。</p>
  */
-((x) => {
-  const elems = {};
-  
+((elems) => {
   [].forEach.call(document.querySelectorAll('[type=radio],[type=checkbox]'), (elem) => {
     if(!elem.name) {
       return;
@@ -26,4 +19,4 @@
   Object.keys(elems).forEach((name) => {
     elems[name][Math.floor(Math.random() * elems[name].length)].click();
   });
-})();
+})({});

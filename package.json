@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "uglifyjs": "uglifyjs",
-    "start": "node ./scripts/uglify.js"
+    "start": "npm run build-scripts && npm run build-index",
+    "build-scripts": "node ./scripts/build-scripts.js",
+    "build-index": "node ./scripts/build-index.js"
   },
   "author": "Neo <neos21@gmail.com> (http://neo.s21.xrea.com/)",
   "license": "MIT",
