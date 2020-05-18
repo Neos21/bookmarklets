@@ -1,0 +1,1 @@
+(o=>{o.host.includes("youtube")&&(o.href="https://www.savethevideo.com/download?url="+o.href)})(location);

@@ -37,7 +37,7 @@ const contents = fs.readdirSync(path.resolve(__dirname, '../src/')).map((fileNam
   if(!isDisablePrintDistScript) {
     content.push(`  <pre>javascript:((d,s)=&gt;{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/dist/${fileName}';d.body.appendChild(s)})(document);</pre>`);
   }
-  content.push('</section>');
+  content.push('</section>\n');
   return content.join('\n');
 });
 
@@ -50,7 +50,7 @@ const srcIndexHtml = fs.readFileSync(path.resolve(__dirname, './build-index.html
 // 置換文字列部分を置換し HTML を組み立てる
 const distIndexHtml = srcIndexHtml
   .replace('{{table-of-contents}}', tableOfContents.join('\n'))
-  .replace('{{contents}}', contents.join('\n'));
+  .replace('{{contents}}\n', contents.join('\n'));
 
 // index.html を出力する
 fs.writeFileSync(path.resolve(__dirname, '../index.html'), distIndexHtml, { encoding: 'utf-8' });
