@@ -1,6 +1,6 @@
 {
   "name": "bookmarklets",
-  "description": "ブックマークレット集。",
+  "description": "ブックマークレット集",
   "private": true,
   "scripts": {
     "uglifyjs": "uglifyjs",

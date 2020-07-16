@@ -24,6 +24,8 @@
   <li><a href="#ec-navi-pex-news-clicker">EC Navi PeX News Clicker</a></li>
   <li><a href="#get-github-repo-size">Get GitHub Repo Size</a></li>
   <li><a href="#get-wikipedia-short-url">Get Wikipedia Short URL</a></li>
+  <li><a href="#instagram-saved-bulk-remove">Instagram Saved Bulk Remove</a></li>
+  <li><a href="#instagram-saved-get-urls">Instagram Saved Get URLs</a></li>
   <li><a href="#open-archive-org-or-google-cache">Open Archive.org Or Google Cache</a></li>
   <li><a href="#open-archive-org">Open Archive.org</a></li>
   <li><a href="#open-between-gh-and-ghp">Open Between GitHub And GitHub Pages</a></li>
@@ -65,6 +67,20 @@
   <pre>javascript:((r,t)=&gt;{[].forEach.call(document.querySelectorAll(&quot;script&quot;),c=&gt;{r=c.innerHTML.match(/wgArticleId.*?(\d+)/u),t=t||(r?r[1]:&quot;&quot;)}),t?prompt(&quot;URL&quot;,&quot;https://ja.wikipedia.org/?curid=&quot;+t):alert(&quot;探索失敗&quot;)})();</pre>
   <p>Wikipedia のページ ID を取得して短縮 URL を取得する。</p>
   <pre>javascript:((d,s)=&gt;{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/dist/get-wikipedia-short-url.js';d.body.appendChild(s)})(document);</pre>
+</section>
+
+<section id="instagram-saved-bulk-remove">
+  <h2><a href="./dist/instagram-saved-bulk-remove.js">Instagram Saved Bulk Remove</a> (<a href="./src/instagram-saved-bulk-remove.js">instagram-saved-bulk-remove.js</a>)</h2>
+  <pre>javascript:((e,r,t)=&gt;{setInterval(()=&gt;{(r=e.querySelector('svg[aria-label=&quot;削除する&quot;]'))&&r.parentNode.click(),setTimeout(()=&gt;{(t=e.querySelector(&quot;a.coreSpriteRightPaginationArrow&quot;))&&t.click()},250)},3e3)})(document);</pre>
+  <p>Instagram の「保存済み」ページで1つ目の投稿を開いたら本ブックマークを起動する。すると「保存」を解除していく。中止する場合はページ更新などで対処する。</p>
+  <pre>javascript:((d,s)=&gt;{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/dist/instagram-saved-bulk-remove.js';d.body.appendChild(s)})(document);</pre>
+</section>
+
+<section id="instagram-saved-get-urls">
+  <h2><a href="./dist/instagram-saved-get-urls.js">Instagram Saved Get URLs</a> (<a href="./src/instagram-saved-get-urls.js">instagram-saved-get-urls.js</a>)</h2>
+  <pre>javascript:((e,t,r,a)=&gt;{r=setInterval(()=&gt;{e.querySelectorAll(&quot;a&quot;).forEach(e=&gt;{e.href.match(/(?!.*liked_by).*(?=\/p\/)/)&&t.add(&quot;igsv &quot;+e.href+&quot;\n&quot;)})},200),e.addEventListener(&quot;keydown&quot;,n=&gt;{n.key.includes(&quot;Esc&quot;)&&(clearInterval(r),(a=e.createElement(&quot;textarea&quot;)).textContent=Array.from(t).join(&quot;&quot;),e.body.appendChild(a),a.select(),e.execCommand(&quot;copy&quot;),e.body.removeChild(a),alert(t.size+&quot;件&quot;))})})(document,new Set);</pre>
+  <p>Instagram の「保存済み」ページで本ブックマークを起動し、全てスクロールしたら Esc キーを押下する。するとクリップボードに投稿 URL がコピーされる。</p>
+  <pre>javascript:((d,s)=&gt;{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/dist/instagram-saved-get-urls.js';d.body.appendChild(s)})(document);</pre>
 </section>
 
 <section id="open-archive-org-or-google-cache">
