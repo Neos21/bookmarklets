@@ -1,4 +1,4 @@
-/** ./src/ ディレクトリ配下の JS ファイルを難読化し ./dist/ ディレクトリに出力する */
+/** ../public/src/ ディレクトリ配下の JS ファイルを難読化し ../public/dist/ ディレクトリに出力する */
 
 const fs = require('fs');
 const path = require('path');
