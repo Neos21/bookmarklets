@@ -1,1 +1,0 @@
-open("http://web.archive.org/web/*/"+location.href,"");

@@ -1,1 +1,0 @@
-(e=>{e=confirm("OK：Archive.org\nCancel：GoogleCache")?"web.archive.org/web/*/":"webcache.googleusercontent.com/search?q=cache:",open("http://"+e+location.href,"")})();

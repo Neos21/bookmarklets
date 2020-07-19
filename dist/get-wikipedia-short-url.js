@@ -1,1 +1,0 @@
-((r,t)=>{[].forEach.call(document.querySelectorAll("script"),c=>{r=c.innerHTML.match(/wgArticleId.*?(\d+)/u),t=t||(r?r[1]:"")}),t?prompt("URL","https://ja.wikipedia.org/?curid="+t):alert("探索失敗")})();

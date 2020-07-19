@@ -4,3 +4,7 @@ Thumbs.db
 *.log
 
 node_modules/
+
+# ビルドして公開するモノは管理しない
+public/index.html
+public/dist/

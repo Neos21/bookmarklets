@@ -1,1 +1,0 @@
-((e,t,r,n,o)=>{r=e(".author"),n=e(".mr-2>a"),r&&n&&(t.open("GET","https://api.github.com/repos/"+r+"/"+n,!1),t.send(),o=JSON.parse(t.response).size,alert(o+"KB\n"+Math.floor(o/1e3)+"MB"))})((e,t)=>(t=document.querySelector(e))?t.innerText:null,new XMLHttpRequest);

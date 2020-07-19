@@ -1,1 +1,0 @@
-open("https://gyo.tc/"+location.href,"");

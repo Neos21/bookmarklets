@@ -4,8 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const uglifyEs = require('uglify-es');
 
-const srcDir = './src';
-const distDir = './dist';
+const srcDir  = path.resolve(__dirname, '../public/src');
+const distDir = path.resolve(__dirname, '../public/dist');
 
 /**
  * JS ファイル1つをビルドする
@@ -20,7 +20,7 @@ function buildFile(fileName) {
 }
 
 if(!fs.existsSync(distDir)) {
-  fs.mkdirSync(distDir);
+  fs.mkdirSync(distDir, { recursive: true });
 }
 
 if(process.argv.length > 2) {
