@@ -26,6 +26,7 @@
   <li><a href="#get-wikipedia-short-url">Get Wikipedia Short URL</a></li>
   <li><a href="#instagram-saved-bulk-remove">Instagram Saved Bulk Remove</a></li>
   <li><a href="#instagram-saved-get-urls">Instagram Saved Get URLs</a></li>
+  <li><a href="#macromill-helper">Macromill Helper</a></li>
   <li><a href="#open-archive-org-or-google-cache">Open Archive.org Or Google Cache</a></li>
   <li><a href="#open-archive-org">Open Archive.org</a></li>
   <li><a href="#open-between-gh-and-ghp">Open Between GitHub And GitHub Pages</a></li>
@@ -81,6 +82,13 @@
   <pre>javascript:((e,t,r,a)=&gt;{r=setInterval(()=&gt;{e.querySelectorAll(&quot;a&quot;).forEach(e=&gt;{e.href.match(/(?!.*liked_by).*(?=\/p\/)/)&&t.add(&quot;igsv &quot;+e.href+&quot;\n&quot;)})},200),e.addEventListener(&quot;keydown&quot;,n=&gt;{n.key.includes(&quot;Esc&quot;)&&(clearInterval(r),(a=e.createElement(&quot;textarea&quot;)).textContent=Array.from(t).join(&quot;&quot;),e.body.appendChild(a),a.select(),e.execCommand(&quot;copy&quot;),e.body.removeChild(a),alert(t.size+&quot;件&quot;))})})(document,new Set);</pre>
   <p>Instagram の「保存済み」ページで本ブックマークを起動し、全てスクロールしたら Esc キーを押下する。するとクリップボードに投稿 URL がコピーされる。</p>
   <pre>javascript:((d,s)=&gt;{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/dist/instagram-saved-get-urls.js';d.body.appendChild(s)})(document);</pre>
+</section>
+
+<section id="macromill-helper">
+  <h2><a href="./dist/macromill-helper.js">Macromill Helper</a> (<a href="./src/macromill-helper.js">macromill-helper.js</a>)</h2>
+  <pre>javascript:((e,l,c,o,i,r)=&gt;{(i=e.querySelector(&quot;#overlay-close&quot;))&&i.click(),(r=e.querySelector(&quot;.matrix-item&quot;))&&r.click(),e[c](&quot;label[for]&quot;).forEach(e=&gt;{/((い|え|が|し|て|に|は|も|ら)ない)|いいえ|正社員|IT|東京|賃貸|既婚/u.test(e.innerText)?(console.log(&quot;クリック&quot;,e.innerText),e.click(),o=!0):console.log(&quot;マッチせず&quot;,e.innerText)}),o?e[c]('#finishButton, [value*=&quot;次へ&quot;], [value*=&quot;送&quot;]').forEach(e=&gt;{e.click()}):(e[c]('[value*=&quot;回答をやめる&quot;]').length&&e[c]('[value*=&quot;次へ&quot;]').forEach(e=&gt;{e.click()}),e[c](&quot;a&quot;).forEach(e=&gt;{e.innerText.includes(&quot;myページへ戻る&quot;)&&e.click()}),e[c](&quot;label&quot;).length||e[c]('#finishButton, [value*=&quot;次へ&quot;]').forEach(e=&gt;{e.click()}),e[c]('[value*=&quot;閉じる&quot;]').forEach(e=&gt;{e.click()}))})(document,0,&quot;querySelectorAll&quot;,!1);</pre>
+  <p>マクロミル形式のアンケートサイトに自動回答する。</p>
+  <pre>javascript:((d,s)=&gt;{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/dist/macromill-helper.js';d.body.appendChild(s)})(document);</pre>
 </section>
 
 <section id="open-archive-org-or-google-cache">
