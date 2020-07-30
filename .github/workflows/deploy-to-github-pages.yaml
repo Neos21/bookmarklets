@@ -5,7 +5,7 @@ on:
       - master
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -16,7 +16,7 @@ jobs:
       - name: Install
         run : npm install
       - name: Build To public/ Directory
-        run : npm run build
+        run : npm run build --if-present
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
