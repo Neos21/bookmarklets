@@ -1,1 +1,1 @@
-(e=>{[].forEach.call(document.querySelectorAll("[type=radio],[type=checkbox]"),a=>{a.name&&(void 0===e[a.name]&&(e[a.name]=[]),e[a.name].push(a))}),Object.keys(e).forEach(a=>{e[a][Math.floor(Math.random()*e[a].length)].click()})})({});
+((e,a,c)=>{e[a]("[type=radio][name],[type=checkbox][name]").forEach(e=>{void 0===c[e.name]&&(c[e.name]=[]),c[e.name].push(e)}),Object.keys(c).forEach(e=>{c[e][Math.floor(Math.random()*c[e].length)].click()}),e[a]('#finishButton,[value*="次へ"],[value*="送"]').forEach(e=>{e.click()})})(document,"querySelectorAll",{});

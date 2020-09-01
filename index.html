@@ -156,7 +156,7 @@
 
 <section id="random-check-inputs">
   <h2><a href="./dist/random-check-inputs.js">Random Check Inputs</a> (<a href="./src/random-check-inputs.js">random-check-inputs.js</a>)</h2>
-  <pre>javascript:(e=&gt;{[].forEach.call(document.querySelectorAll(&quot;[type=radio],[type=checkbox]&quot;),a=&gt;{a.name&&(void 0===e[a.name]&&(e[a.name]=[]),e[a.name].push(a))}),Object.keys(e).forEach(a=&gt;{e[a][Math.floor(Math.random()*e[a].length)].click()})})({});</pre>
+  <pre>javascript:((e,a,c)=&gt;{e[a](&quot;[type=radio][name],[type=checkbox][name]&quot;).forEach(e=&gt;{void 0===c[e.name]&&(c[e.name]=[]),c[e.name].push(e)}),Object.keys(c).forEach(e=&gt;{c[e][Math.floor(Math.random()*c[e].length)].click()}),e[a]('#finishButton,[value*=&quot;次へ&quot;],[value*=&quot;送&quot;]').forEach(e=&gt;{e.click()})})(document,&quot;querySelectorAll&quot;,{});</pre>
   <p>ラジオボタン <code>input[type=&quot;radio&quot;]</code>・チェックボックス <code>input[type=&quot;checkbox&quot;]</code> を <code>name</code> 属性ごとに1つランダムにクリックする。</p>
   <pre>javascript:((d,s)=&gt;{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/dist/random-check-inputs.js';d.body.appendChild(s)})(document);</pre>
 </section>
