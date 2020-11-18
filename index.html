@@ -3,20 +3,27 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bookmarklets - Neo's GitHub Pages</title>
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="icon" href="/favicon.ico">
-    <link rel="icon" href="/favicon-192x192.png" sizes="192x192" type="image/png">
-    <link rel="apple-touch-icon" href="/apple-touch-icon-152x152.png" sizes="152x152">
+    <title>Bookmarklets</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@neos21/neos-normalize@2.0.1/neos-normalize.min.css">
+    <link rel="icon" href="https://neos21.github.io/favicon.ico">
+    <style>
+
+body {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+    </style>
   </head>
   <body>
-    <header><a href="/index.html">Neo's GitHub Pages</a></header>
-    <main>
-      <section>
-        <h1>Bookmarklets</h1>
-        <p>ブックマークレット集。</p>
+
+<h1>Bookmarklets</h1>
+<p>ブックマークレット集。</p>
 
 <ul>
+  <li><a href="#copy-current-page-title-and-url-for-html">Copy Current Page Title And URL For HTML</a></li>
+  <li><a href="#copy-current-page-title-and-url-for-markdown">Copy Current Page Title And URL For Markdown</a></li>
   <li><a href="#copy-current-page-title-and-url">Copy Current Page Title And URL</a></li>
   <li><a href="#ec-navi-pex-news-clicker">EC Navi PeX News Clicker</a></li>
   <li><a href="#get-github-repo-size">Get GitHub Repo Size</a></li>
@@ -38,6 +45,20 @@
   <li><a href="#select-range">Select Range</a></li>
   <li><a href="#survey-helpers">Survey Helpers</a></li>
 </ul>
+
+<section id="copy-current-page-title-and-url-for-html">
+  <h2><a href="./dist/copy-current-page-title-and-url-for-html.js">Copy Current Page Title And URL For HTML</a> (<a href="./src/copy-current-page-title-and-url-for-html.js">copy-current-page-title-and-url-for-html.js</a>)</h2>
+  <pre>javascript:((e,t)=&gt;{(t=e.createElement(&quot;textarea&quot;)).textContent=`&lt;a href=&quot;${e.URL.replace(/&/gu,&quot;&amp;&quot;)}&quot;&gt;${e.title.replace(/(\[|\]|&lt;|&gt;)/gu,&quot; &quot;).replace(/ +/gu,&quot; &quot;).trim()}&lt;/a&gt;`,e.body.appendChild(t),t.select(),e.execCommand(&quot;copy&quot;),e.body.removeChild(t)})(document);</pre>
+  <p>閲覧中のページのタイトルと URL を HTML リンク形式にしてクリップボードにコピーする。</p>
+  <pre>javascript:((d,s)=&gt;{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/dist/copy-current-page-title-and-url-for-html.js';d.body.appendChild(s)})(document);</pre>
+</section>
+
+<section id="copy-current-page-title-and-url-for-markdown">
+  <h2><a href="./dist/copy-current-page-title-and-url-for-markdown.js">Copy Current Page Title And URL For Markdown</a> (<a href="./src/copy-current-page-title-and-url-for-markdown.js">copy-current-page-title-and-url-for-markdown.js</a>)</h2>
+  <pre>javascript:((e,t)=&gt;{(t=e.createElement(&quot;textarea&quot;)).textContent=`- [${e.title.replace(/(\[|\])/gu,&quot; &quot;).replace(/ +/gu,&quot; &quot;).trim()}](${e.URL.replace(/&/gu,&quot;&amp;&quot;)})`,e.body.appendChild(t),t.select(),e.execCommand(&quot;copy&quot;),e.body.removeChild(t)})(document);</pre>
+  <p>閲覧中のページのタイトルと URL を Markdown リンク形式にしてクリップボードにコピーする。</p>
+  <pre>javascript:((d,s)=&gt;{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/dist/copy-current-page-title-and-url-for-markdown.js';d.body.appendChild(s)})(document);</pre>
+</section>
 
 <section id="copy-current-page-title-and-url">
   <h2><a href="./dist/copy-current-page-title-and-url.js">Copy Current Page Title And URL</a> (<a href="./src/copy-current-page-title-and-url.js">copy-current-page-title-and-url.js</a>)</h2>
@@ -201,27 +222,12 @@
   <pre>javascript:((d,s,e)=&gt;{e=()=&gt;{N21SH({cityName:'東京',districtName:'足立',age:25,ageRange:20,birthYear:1993,birthMonth:2,birthDate:24,gender:'女',marriage:'未婚',jobRegExp:'正社|社員'},{loop:5})};s=d.createElement('script');s.onload=e;s.src='https://neos21.github.io/bookmarklets/dist/survey-helpers.js';d.body.appendChild(s)})(document);</pre>
 </section>
 
-        <section>
-          <h2>Author</h2>
-          <p><a href="http://neo.s21.xrea.com/">Neo</a></p>
-          <ul>
-            <li><a href="https://github.com/Neos21/bookmarklets">GitHub - bookmarklets</a></li>
-            <li><a href="https://neos21.github.io/bookmarklets/">GitHub Pages - bookmarklets</a></li>
-          </ul>
-        </section>
-        <section>
-          <h2>Links</h2>
-          <ul>
-            <li><a href="http://neo.s21.xrea.com/">Neo's World</a></li>
-            <li><a href="https://neos21.hatenablog.com/">Corredor</a></li>
-            <li><a href="https://neos21.hatenablog.jp/">Murga</a></li>
-            <li><a href="https://neos21.hateblo.jp/">El Mylar</a></li>
-            <li><a href="https://neos21.github.io/">Neo's GitHub Pages</a></li>
-            <li><a href="https://github.com/Neos21/">GitHub - Neos21</a></li>
-          </ul>
-        </section>
-      </section>
-    </main>
-    <footer>Copyright &copy; 2016-2020 <a href="/index.html">Neo</a>, All rights reserved.</footer>
+<h2>Links</h2>
+<ul>
+  <li><a href="https://neos21.net/">Neo's World</a></li>
+  <li><a href="https://github.com/Neos21/">GitHub - Neos21</a></li>
+  <li><a href="https://github.com/Neos21/bookmarklets">GitHub - bookmarklets</a></li>
+</ul>
+
   </body>
 </html>
