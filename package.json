@@ -24,6 +24,6 @@
     "url": "https://github.com/sponsors/Neos21"
   },
   "devDependencies": {
-    "uglify-es": "3.3.9"
+    "uglify-js": "3.16.1"
   }
 }

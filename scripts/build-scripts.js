@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const uglifyEs = require('uglify-es');
+const uglifyJs = require('uglify-js');
 
 const srcDir  = path.resolve(__dirname, '../public/src');
 const distDir = path.resolve(__dirname, '../public/dist');
@@ -13,7 +13,7 @@ const distDir = path.resolve(__dirname, '../public/dist');
  * @param {string} fileName ファイル名
  */
 function buildFile(fileName) {
-  const uglified = uglifyEs.minify({
+  const uglified = uglifyJs.minify({
     file: fs.readFileSync(path.join(srcDir, fileName), 'utf-8')
   }).code;
   fs.writeFileSync(path.join(distDir, fileName), uglified, 'utf-8');
