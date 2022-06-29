@@ -1,1 +1,1 @@
-((r,t)=>{[].forEach.call(document.querySelectorAll("script"),c=>{r=c.innerHTML.match(/wgArticleId.*?(\d+)/u),t=t||(r?r[1]:"")}),t?prompt("URL","https://ja.wikipedia.org/?curid="+t):alert("探索失敗")})();
+((t,c)=>{[].forEach.call(document.querySelectorAll("script"),r=>{t=r.innerHTML.match(/wgArticleId.*?(\d+)/u),c=c||(t?t[1]:"")}),c?prompt("URL","https://ja.wikipedia.org/?curid="+c):alert("探索失敗")})();

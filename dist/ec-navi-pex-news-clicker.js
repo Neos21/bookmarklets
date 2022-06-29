@@ -1,1 +1,1 @@
-(o=>["angry","sad","cool","like"].map(o=>"#submit-"+o).concat(["bad","sad","glad","good"].map(o=>[".btn_"+o,".btn_feeling_"+o]).flat()).some(a=>(o=document.querySelector(a))&&(o.scrollIntoView(),o.click(),!0)))();
+(a=>["angry","sad","cool","like"].map(o=>"#submit-"+o).concat(["bad","sad","glad","good"].map(o=>[".btn_"+o,".btn_feeling_"+o]).flat()).some(o=>(a=document.querySelector(o))&&(a.scrollIntoView(),a.click(),!0)))();
