@@ -6,11 +6,11 @@
  */
 ((d, q, c, p) => {
   p = d[q]('ytd-popup-container');
-  d.body.insertAdjacentHTML('beforeend', '<input type=checkbox id=x style=position:absolute;top:0;right:0;z-index:9999>');
+  d.body.insertAdjacentHTML('beforeend', '<input type=checkbox id=z accesskey=z style=position:absolute;top:0;right:0;z-index:9999>');
   new MutationObserver(_ => {
     p[q + 'All']('ytd-menu-service-item-renderer').length > 1 && setTimeout(_ =>
       p[q]('tp-yt-iron-dropdown[focused]')?.[q + 'All']('yt-formatted-string').forEach(f =>
-        f.textContent != (d[q]('#x').checked ? 'チャンネルをおすすめに表示しない' : '興味なし') || c || (
+        f.textContent != (d[q]('#z').checked ? 'チャンネルをおすすめに表示しない' : '興味なし') || c || (
           c = true,
           setTimeout(_ =>
             c && (f.parentNode.parentNode.click(), c = false)
