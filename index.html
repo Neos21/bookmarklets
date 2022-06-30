@@ -51,6 +51,7 @@ body {
   <li><a href="#select-range-touch">Select Range Touch</a></li>
   <li><a href="#select-range">Select Range</a></li>
   <li><a href="#survey-helpers">Survey Helpers</a></li>
+  <li><a href="#youtube-auto-click-not-interested-or-dont-recommend-channel">YouTube Auto Click Not Interested Or Don't Recommend Channel</a></li>
   <li><a href="#youtube-auto-click-not-interested">YouTube Auto Click Not Interested</a></li>
 </ul>
 
@@ -228,6 +229,14 @@ body {
 })(document);</pre>
   <p>1行にすると以下のようになる。</p>
   <pre>javascript:((d,s,e)=&gt;{e=()=&gt;{N21SH({cityName:'東京',districtName:'足立',age:25,ageRange:20,birthYear:1993,birthMonth:2,birthDate:24,gender:'女',marriage:'未婚',jobRegExp:'正社|社員'},{loop:5})};s=d.createElement('script');s.onload=e;s.src='https://neos21.github.io/bookmarklets/dist/survey-helpers.js';d.body.appendChild(s)})(document);</pre>
+</section>
+
+<section id="youtube-auto-click-not-interested-or-dont-recommend-channel">
+  <h2><a href="./dist/youtube-auto-click-not-interested-or-dont-recommend-channel.js">YouTube Auto Click Not Interested Or Don't Recommend Channel</a> (<a href="./src/youtube-auto-click-not-interested-or-dont-recommend-channel.js">youtube-auto-click-not-interested-or-dont-recommend-channel.js</a>)</h2>
+  <pre>javascript:((o,r,n,t)=&gt;{t=o[r](&quot;ytd-popup-container&quot;),o.body.insertAdjacentHTML(&quot;beforeend&quot;,&quot;&lt;input type=checkbox id=x style=position:absolute;top:0;right:0;z-index:9999&gt;&quot;),new MutationObserver(e=&gt;{1&lt;t[r+&quot;All&quot;](&quot;ytd-menu-service-item-renderer&quot;).length&&setTimeout(e=&gt;t[r](&quot;tp-yt-iron-dropdown[focused]&quot;)?.[r+&quot;All&quot;](&quot;yt-formatted-string&quot;).forEach(t=&gt;t.textContent!=(o[r](&quot;#x&quot;).checked?&quot;チャンネルをおすすめに表示しない&quot;:&quot;興味なし&quot;)||n||(n=!0,setTimeout(e=&gt;n&&(t.parentNode.parentNode.click(),n=!1),5))),5)}).observe(t,{attributes:!0,subtree:!0})})(document,&quot;querySelector&quot;,!1);</pre>
+  <p>YouTube トップ画面で動画のサムネイル右下に出る「…」アイコンをクリックすると自動的に「興味なし」か「チャンネルをおすすめに表示しない」をクリックする。</p>
+  <p>画面右上に登場するチェックボックスを付けると「チャンネルをおすすめに表示しない」を選択するようになる。</p>
+  <pre>javascript:((d,s)=&gt;{s=d.createElement('script');s.src='https://neos21.github.io/bookmarklets/dist/youtube-auto-click-not-interested-or-dont-recommend-channel.js';d.body.appendChild(s)})(document);</pre>
 </section>
 
 <section id="youtube-auto-click-not-interested">
